@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        /* 📄 질문자님이 보내주신 이미지와 100% 똑같은 독립형 미니멀리즘 디자인 */
+        body {
+            margin: 0 !important;
+            padding: 20px !important;
+            background-color: #ffffff !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        /* 전체 폼 레이아웃 상자 */
+        .contact-form {
+            width: 100%;
+            max-width: 1000px; /* 👈 포트폴리오 가로폭과 연동되는 황금 비율 규격 */
+            display: flex;
+            flex-direction: column;
+            gap: 15px; 
+        }
+
+        /* Name, Email, Message 입력창 통합 직각 테두리 디자인 */
+        .form-group input,
+        .form-form-text textarea {
+            width: 100% !important;
+            box-sizing: border-box !important;
+            border: 1px solid #dcdcdc !important; /* 👈 슬림하고 부드러운 연회색선 */
+            border-radius: 0px !important;       /* 👈 모서리를 칼형 직각으로 완벽 고정 */
+            padding: 14px 18px !important;
+            font-size: 13px !important;
+            color: #4a4949 !important;
+            background-color: #ffffff !important;
+            outline: none !important;
+            transition: border-color 0.2s ease;
+        }
+
+        /* 마우스를 입력창에 클릭해 넣었을 때 테두리가 살짝 선명해지는 효과 */
+        .form-group input:focus,
+        .form-form-text textarea:focus {
+            border-color: #a0a0a0 !important;
+        }
+
+        /* Message 본문 입력창 높이 시원하게 지정 */
+        .form-form-text textarea {
+            height: 250px !important; /* 👈 대형 메시지 창 세로 크기 세팅 */
+            resize: none !important;  
+        }
+
+        /* ✉️ 우측 하단 SEND 버튼 정렬 전용 상자 */
+        .btn-container {
+            display: flex;
+            justify-content: flex-end; 
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        /* 고급 연회색 SEND 버튼 디자인 */
+        .send-btn {
+            background-color: #d3d3d3 !important; 
+            color: #ffffff !important;
+            border: none !important;
+            border-radius: 0px !important; 
+            padding: 10px 24px !important;
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            letter-spacing: 1.5px !important;
+            cursor: pointer !important;
+            text-transform: uppercase; 
+            transition: all 0.2s ease;
+        }
+
+        /* 마우스를 SEND 버튼 위에 올렸을 때 진한 회색으로 변신 */
+        .send-btn:hover {
+            background-color: #4a4949 !important;
+        }
+    </style>
+</head>
+<body>
+
+<form class="contact-form" action="https://formspree.io" method="POST">
+    
+    <!-- 1. Name 입력 칸 -->
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Name *" required>
+    </div>
+
+    <!-- 2. Email 입력 칸 -->
+    <div class="form-group">
+        <input type="email" name="_replyto" placeholder="Email *" required>
+    </div>
+
+    <!-- 3. Message 대형 입력 칸 -->
+    <div class="form-form-text">
+        <textarea name="message" placeholder="Message" required></textarea>
+    </div>
+
+    <!-- 4. 우측 하단 SEND 버튼 -->
+    <div class="btn-container">
+        <button type="submit" class="send-btn">Send</button>
+    </div>
+
+</form>
+
+</body>
+</html>
