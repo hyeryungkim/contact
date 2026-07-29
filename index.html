@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    
+    <!-- 1. Inter 웹폰트 로드 -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
     <style>
-        /* 📄 질문자님이 보내주신 이미지와 100% 똑같은 독립형 미니멀리즘 디자인 */
+        /* 📄 미니멀리즘 디자인 레이아웃 */
         body {
             margin: 0 !important;
             padding: 20px !important;
             background-color: #ffffff !important;
-            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -19,7 +25,7 @@
         /* 전체 폼 레이아웃 상자 */
         .contact-form {
             width: 100%;
-            max-width: 1000px; /* 👈 포트폴리오 가로폭과 연동되는 황금 비율 규격 */
+            max-width: 1000px;
             display: flex;
             flex-direction: column;
             gap: 15px; 
@@ -30,8 +36,8 @@
         .form-form-text textarea {
             width: 100% !important;
             box-sizing: border-box !important;
-            border: 1px solid #dcdcdc !important; /* 👈 슬림하고 부드러운 연회색선 */
-            border-radius: 0px !important;       /* 👈 모서리를 칼형 직각으로 완벽 고정 */
+            border: 1px solid #dcdcdc !important;
+            border-radius: 0px !important;
             padding: 14px 18px !important;
             font-size: 13px !important;
             color: #4a4949 !important;
@@ -46,13 +52,13 @@
             border-color: #a0a0a0 !important;
         }
 
-        /* Message 본문 입력창 높이 시원하게 지정 */
+        /* Message 본문 입력창 높이 지정 */
         .form-form-text textarea {
-            height: 250px !important; /* 👈 대형 메시지 창 세로 크기 세팅 */
+            height: 250px !important;
             resize: none !important;  
         }
 
-        /* ✉️ 우측 하단 SEND 버튼 정렬 전용 상자 */
+        /* 우측 하단 SEND 버튼 정렬 전용 상자 */
         .btn-container {
             display: flex;
             justify-content: flex-end; 
@@ -83,7 +89,8 @@
 </head>
 <body>
 
-<form class="contact-form" action="https://formspree.io" method="POST">
+<!-- ⚠️ 아래 action 주소 맨 뒤에 발급받으신 회원님의 고유코드를 직접 채워 넣어주세요! -->
+<form class="contact-form" action="https://formspree.io/f/xlgqvnpk" method="POST">
     
     <!-- 1. Name 입력 칸 -->
     <div class="form-group">
